@@ -1,4 +1,4 @@
-from snowboy import snowboydecoder
+import snowboydecoder
 import sys
 import signal
 
@@ -13,7 +13,7 @@ def interrupt_callback():
     print('hotword detected')
     return interrupted
 
-model = './snowboy/resources/models/snowboy.umdl'
+model = './resources/models/snowboy.umdl'
 
 # capture SIGINT signal, e.g., Ctrl+C
 signal.signal(signal.SIGINT, signal_handler)
